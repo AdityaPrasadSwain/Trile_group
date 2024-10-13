@@ -91,20 +91,28 @@
     font-size: 10px;
     text-align: left;
 }
-#left_feild{
+#input1{
     width:90%;
     height:20px;
     border:2px solid darkblue;
     PADDING:15PX 10PX;
     border-radius:5px;
-    
+    font-size: 15px;
+} 
+#input2{
+    width:90%;
+    height:20px;
+    border:2px solid darkblue;
+    PADDING:15PX 10PX;
+    border-radius:5px;
+    font-size: 15px;
 } 
 #right_feild{
     width:90%;
     height:20px;
     border:2px solid darkblue;
     border-radius:5px;
-  PADDING:15PX 10PX;
+    PADDING:15PX 10PX;
 }
 
 .ser{
