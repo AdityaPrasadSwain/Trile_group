@@ -81,19 +81,20 @@
 
 
 <?php
-$servername = "localhost";
-$username="root";
-$password="";
-$database="firstform";
+// $servername = "localhost";
+// $username="root";
+// $password="";
+// $database="firstform";
 
-$conn = mysqli_connect($servername,$username,$password,$database);
+// $conn = mysqli_connect($servername,$username,$password,$database);
 
-if($conn){
-    echo "<center>Connection Ok.....</center>";
-}
-else{
-    echo "<center>Connection Failed</center>";
-}
+// if($conn){
+//     echo "<center>Connection Ok.....</center>";
+// }
+// else{
+//     echo "<center>Connection Failed</center>";
+// }
+include("connection.php");
 if($_POST['submit']){
   
     $fname    = $_POST['fname'];
