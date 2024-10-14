@@ -7,9 +7,9 @@ $databasename ="firstform";
 $conn = mysqli_connect($servername,$username,$password,$databasename);
 
 if ($conn) {
-    echo "connection Ok........";
+    echo "<center>connection Ok........</center>";
 }
 else{
-    echo "connection failed.......";
+    echo "<center>connection failed.......</center>";
 }
 ?>
