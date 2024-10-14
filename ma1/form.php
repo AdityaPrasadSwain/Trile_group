@@ -24,34 +24,34 @@
     <div class="row g-3">
   <div class="col">
   <label for="inputEmail4" class="form-label">First Name</label>
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname">
+    <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="fname" required>
   </div>
   <div class="col">
   <label for="inputEmail4" class="form-label">Last Name</label>
-    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lname">
+    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lname" required>
   </div>
 </div>
   <div class="col-md-6">
     <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your Email" name="email">
+    <input type="email" class="form-control" id="inputEmail4" placeholder="Enter your Email" name="email" required>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your Password" name="password">
+    <input type="password" class="form-control" id="inputPassword4" placeholder="Enter your Password" name="password" required>
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Enter your Address" name="address">
+    <input type="text" class="form-control" id="inputAddress" placeholder="Enter your Address" name="address" required>
   </div>
   
   <div class="col-md-6">
     <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity" placeholder="Enter your City" name="city">
+    <input type="text" class="form-control" id="inputCity" placeholder="Enter your City" name="city" required>
   </div>
   <div class="col-md-4">
     <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select" name="state">
-      <option selected>Choose...</option>
+    <select id="inputState" class="form-select" name="state" required>
+      <option>Choose...</option>
       <option>Odisha</option>
       <option>Lucky</option>
       <option>Moon</option>
@@ -59,11 +59,11 @@
   </div>
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip" placeholder="Enter your Zip" name="zip">
+    <input type="text" class="form-control" id="inputZip" placeholder="Enter your Zip" name="zip" required>
   </div>
   <div class="col-12">
     <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <input class="form-check-input" type="checkbox" id="gridCheck" required>
       <label class="form-check-label" for="gridCheck">
         Check me out
       </label>
@@ -94,8 +94,8 @@ if($conn){
 else{
     echo "<center>Connection Failed</center>";
 }
-
 if($_POST['submit']){
+  
     $fname    = $_POST['fname'];
     $lname    = $_POST['lname'];
     $email    = $_POST['email'];
@@ -106,7 +106,9 @@ if($_POST['submit']){
     $zip      = $_POST['zip'];
 
     $query = "INSERT INTO moon VALUES ('$fname','$lname','$email','$password','$address','$city','$state','$zip')";
+
     $data = mysqli_query($conn,$query);
+
     if($data){
         echo "<center>Data inserted successfull........</center>";
     }
